@@ -42,7 +42,6 @@ export const moreText = `More Commands:
 /quiz  - Take a random quiz on a specific topic
 
 More features coming soon!
-For support or feedback, contact- https://github.com/tilakdotcom.
 `;
 
 
@@ -55,7 +54,6 @@ For now, you can use these commands:
 - **/more** → Get more information  
 
 Let me know how I can assist you!
-For support or feedback, contact- https://github.com/tilakdotcom.
 `
 
 
