@@ -1,5 +1,5 @@
 {
-  "name": "learn",
+  "name": "1.telegram_bot",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,11 +7,15 @@
     "build": "tsc && npm install && prisma generate --schema=./prisma/schema.prisma && npm install",
     "start": "node ./dist/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "telegram",
+    "bot",
+    "telegram-bot-api"
+  ],
+  "author": "tilak",
   "license": "ISC",
   "type": "commonjs",
-  "description": "",
+  "description": "A simple Telegram bot using Telegraf framework",
   "dependencies": {
     "axios": "^1.8.4",
     "dotenv": "^16.4.7",
