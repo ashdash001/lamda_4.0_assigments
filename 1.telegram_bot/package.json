@@ -1,0 +1,26 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev  --files src/index.ts",
+    "build": "tsc && npm install && prisma generate --schema=./prisma/schema.prisma && npm install",
+    "start": "node ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "telegraf": "^4.16.3",
+    "ts-node-dev": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.13",
+    "typescript": "^5.8.2"
+  }
+}
