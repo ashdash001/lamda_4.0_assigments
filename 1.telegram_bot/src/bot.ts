@@ -28,7 +28,7 @@ const dsaCmd = () => {
 };
 
 const dsaCmdOnly = () => {
-  return Algorithms.map((algo: AlgorithmType) => `/${algo.cmd} `);
+  return Algorithms.map((algo: AlgorithmType) => `/${algo.cmd}`);
 };
 export const LernCommand = (bot: Bot) => {
   bot.command("learn", (ctx) => {
@@ -36,6 +36,7 @@ export const LernCommand = (bot: Bot) => {
       parse_mode: "Markdown",
     });
   });
+
   Algorithms.map((algo: AlgorithmType) =>
     bot.command(algo.cmd, (ctx) =>
       ctx.reply(
