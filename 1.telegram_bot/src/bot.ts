@@ -27,6 +27,10 @@ const dsaCmd = () => {
   );
 };
 
+
+const dsaCmdOnly =()=>{
+  return Algorithms.map((algo: AlgorithmType) => `/${algo.cmd} `);
+}
 export const LernCommand = (bot: Bot) => {
   bot.command("learn", (ctx) => {
     ctx.reply(dsaCmd().join(`\n`) + "\nType /learn to go back !", {
@@ -48,9 +52,10 @@ export const LernCommand = (bot: Bot) => {
 export const undefinedCommand = (bot: Bot) => {
   bot.on("text", async (ctx) => {
     const userMessage = ctx.message.text;
+    const cmds = dsaCmdOnly()
 
     // List of valid commands
-    const validCommands = ["/start", "/quiz", "/help"];
+    const validCommands = ["/start", "/quiz", "/help", cmds.join(",")];
 
     if (!validCommands.includes(userMessage)) {
       await ctx.reply(undefinedText, { parse_mode: "Markdown" });
