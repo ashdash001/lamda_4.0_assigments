@@ -56,7 +56,8 @@ export const undefinedCommand = (bot: Bot) => {
       "/start",
       "/quiz",
       "/help",
-      ["/start", "/quiz", "/help", "/more", ...dsaCmdOnly()],
+      "/more",
+      ...dsaCmdOnly(),
     ];
 
     if (!validCommands.includes(userMessage)) {
