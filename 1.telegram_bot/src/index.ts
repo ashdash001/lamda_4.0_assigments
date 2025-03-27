@@ -25,7 +25,7 @@ const WEBHOOK_URL = `${RENDER_EXTERNAL_URL}/webhook/${TELEBOT_KEY}`;
 bot.telegram.setWebhook(WEBHOOK_URL);
 
 // Keep Render happy
-app.get("/", (req, res) => {
+app.get("/health", (req, res) => {
   res.send("Bot is running!");
 });
 
